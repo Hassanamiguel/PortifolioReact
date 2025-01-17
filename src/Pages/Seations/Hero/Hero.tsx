@@ -14,8 +14,8 @@ const Hero = () => {
         display: 'flex',
         alignItems: 'center',
         [theme.breakpoints.up('xs')]: { // >= mobile
-            paddingTop: '200px',
-            height: '100%'
+            paddingTop: '80px',
+            height: '120vh'
 
         },
         [theme.breakpoints.up('md')]: {// <= mobile
@@ -60,7 +60,7 @@ const Hero = () => {
 
                             <Grid container display="flex" justifyContent='center' spacing={3} pt={3}>
                                 <Grid item xs={12} md={5} display='flex' justifyContent='center'>
-                                    <StyledButton>
+                                    <StyledButton onclick={() => console.log('Donwload')}>
                                         <DownloadIcon />
                                         <Typography>
                                             Download CV
@@ -69,7 +69,7 @@ const Hero = () => {
 
                                 </Grid>
                                 <Grid item xs={12} md={5} display='flex' justifyContent='center'>
-                                    <StyledButton>
+                                    <StyledButton onclick={() => console.log('Contant')}>
                                         <EmailIcon />
                                         <Typography>
                                             Contact me
