@@ -11,13 +11,21 @@ const Hero = () => {
 
     const StyleHero = styled('div')(() => ({
         backgroundColor: theme.palette.primary.main,
-        height: "100vh",
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        [theme.breakpoints.up('xs')]: { // >= mobile
+            paddingTop: '200px',
+            height: '100%'
+
+        },
+        [theme.breakpoints.up('md')]: {// <= mobile
+            paddingTop: '0px',
+            height: '100vh'
+        }
     }))
 
     const StyleImg = styled('img')(({theme}) => ({
-        width: "80%",
+        width: "75%",
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`,
         /*margin: '0% 10%'*/
